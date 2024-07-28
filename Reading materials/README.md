@@ -1,0 +1,2 @@
+1. ### Please read HUMANITIES TO DIGITAL HUMANITIES in Anne Burdick, Johanna Drucker, Peter Lunenfeld, Todd Presner, Jeffrey Schnapp - Digital humanities-The MIT Press (2012) for our class on 29th July Monday
+2. ### Please read and annotate important events and any other key points in the article The History of Humanities Computing by Susan Hockey and we will discuss it in the class on 30th July Tuesday 
