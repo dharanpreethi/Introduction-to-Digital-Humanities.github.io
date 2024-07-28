@@ -1,2 +1,4 @@
 # Introduction-to-Digital-Humanities
+The course **Introduction to Digital Humanities** introduces theoretical and applied approaches, methods, and tools in the field of digital humanities. It is designed to teach students the foundational concepts, essential tools, and skills required to conduct both quantitative and qualitative studies. It has six units: What is Digital Humanities?, Digital Archive, Text Mining, Mapping, Network Visualization, and Digital Storytelling. This course has both theoretical and practical approaches. It provides hands-on sessions on various tools and technologies for each method, including GitHub and ChatGPT prompts. The students will produce a small project for each method after learning the tools.
+
 This repository contains course materials, including reading materials, tutorials, assignments, and various reports.
