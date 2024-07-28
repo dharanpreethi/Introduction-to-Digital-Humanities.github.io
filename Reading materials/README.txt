@@ -1,1 +1,1 @@
-
+1. Please read HUMANITIES TO DIGITAL HUMANITIES in Anne Burdick, Johanna Drucker, Peter Lunenfeld, Todd Presner, Jeffrey Schnapp - Digital humanities-The MIT Press (2012) for our class on 29th July Monday
