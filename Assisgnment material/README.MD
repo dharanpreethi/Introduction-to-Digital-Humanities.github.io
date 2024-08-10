@@ -1,1 +1,1 @@
-#**Rubrics and other guidelines for the assignments**
+# **Rubrics and other guidelines for the assignments**
