@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Humanities Lab IITSIM</title>
+    <style>
+        body {
+            background-color: #A5AAAB;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            color: black;
+            font-size: 34px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-size: 18px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            top: 100%;
+            left: 0;
+        }
+        nav ul ul li {
+            display: block;
+        }
+        nav ul ul li a {
+            padding: 10px 20px;
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple GitHub Pages website.</p>
+    <div class="container">
+        <h1>Digital Humanities Lab IITSIM</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">People</a>
+                    <ul>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Students</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Student Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
-
