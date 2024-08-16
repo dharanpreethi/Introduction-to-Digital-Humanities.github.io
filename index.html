@@ -25,7 +25,7 @@
             padding: 0 20px;
             display: flex;
             justify-content: space-between;
-            align-items: left;
+            align-items: center;
         }
         h1 {
             margin: 0;
@@ -69,17 +69,63 @@
             margin: 20px auto;
             padding: 0 20px;
         }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+            }
+            nav.show {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding-left: 20px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Digital Humanities Lab IITSIM</h1>
-            <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">People</a>
+                        <a href="#" onclick="toggleDropdown(this)">People</a>
                         <div class="dropdown-content">
                             <a href="#">Faculty</a>
                             <a href="#">Students</a>
@@ -88,13 +134,13 @@
                     <li><a href="#">Student Projects</a></li>
                     <li><a href="#">Blog</a></li>
                     <li class="dropdown">
-                        <a href="#">Reading Group</a>
+                        <a href="#" onclick="toggleDropdown(this)">Reading Group</a>
                         <div class="dropdown-content">
                             <a href="#">Critical Code Studies</a>
                             <a href="#">AI and the Humanities</a>
                         </div>
-                    <li><a href="#">Contact</a></li>
                     </li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -102,5 +148,19 @@
     <main>
         <!-- Your main content goes here -->
     </main>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('main-nav');
+            nav.classList.toggle('show');
+        }
+
+        function toggleDropdown(element) {
+            if (window.innerWidth <= 768) {
+                element.parentElement.classList.toggle('active');
+                event.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>
