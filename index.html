@@ -164,3 +164,126 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Based Single Page Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .active {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="homeLink" onclick="loadPage('home')">Home</a></li>
+                <li><a id="peopleLink" onclick="loadPage('people')">People</a></li>
+                <li><a id="projectsLink" onclick="loadPage('projects')">Student Projects</a></li>
+                <li><a id="blogLink" onclick="loadPage('blog')">Blog</a></li>
+                <li><a id="readingLink" onclick="loadPage('reading')">Reading Group</a></li>
+                <li><a id="contactLink" onclick="loadPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- Content will be dynamically loaded here -->
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the landing page of the website.</p>
+    </main>
+
+    <script>
+        const pages = {
+            home: `
+                <h1>Welcome to the Home Page</h1>
+                <p>This is the landing page of the website.</p>
+            `,
+            people: `
+                <h1>Meet the People</h1>
+                <p>Information about the people involved in the project.</p>
+            `,
+            projects: `
+                <h1>Student Projects</h1>
+                <p>Details of various student projects.</p>
+            `,
+            blog: `
+                <h1>Blog</h1>
+                <p>Read our latest blog posts.</p>
+            `,
+            reading: `
+                <h1>Reading Group</h1>
+                <p>Join our reading group discussions.</p>
+            `,
+            contact: `
+                <h1>Contact Us</h1>
+                <p>Contact details and form go here.</p>
+            `
+        };
+
+        function loadPage(page) {
+            document.getElementById('content').innerHTML = pages[page];
+            updateActiveLink(page);
+        }
+
+        function updateActiveLink(activePage) {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById(activePage + 'Link').classList.add('active');
+        }
+
+        // Initially load the Home page
+        loadPage('home');
+    </script>
+</body>
+</html>
