@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Humanities Lab IIT (ISM) Dhanbad</title>
+    <style>
+        body {
+            font-family: Cambria, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E0DED6;
+            color: black;
+            font-size: 18px;
+        }
+        header {
+            background-color: #E0DED6;
+            width: 100%;
+            padding: 50px 0;
+            border-bottom: 3px solid #E0DED6;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            transition: opacity 0.3s ease;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #555;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #E0DED6;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 14px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+            }
+            nav.show {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding-left: 20px;
+                opacity: 1;
+            }
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        .active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Digital Humanities Lab IIT (ISM) Dhanbad</h1>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a id="homeLink" href="#" onclick="loadPage('home')">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown(event, 'people')">People</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="loadPage('faculty')">Faculty</a>
+                            <a href="#" onclick="loadPage('students')">Students</a>
+                        </div>
+                    </li>
+                    <li><a id="projectsLink" href="#" onclick="loadPage('projects')">Student Projects</a></li>
+                    <li><a id="blogLink" href="#" onclick="loadPage('blog')">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown(event, 'reading')">Reading Group</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="loadPage('critical-code')">Critical Code Studies</a>
+                            <a href="#" onclick="loadPage('ai-humanities')">AI and the Humanities</a>
+                        </div>
+                    </li>
+                    <li><a id="contactLink" href="#" onclick="loadPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="content">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <script>
+        const pages = {
+            home: `
+                <h1>Welcome to the Home Page</h1>
+                <p>This is the landing page of the website.</p>
+            `,
+            faculty: `
+                <h1>Faculty</h1>
+                <p>Information about the faculty members.</p>
+            `,
+            students: `
+                <h1>Students</h1>
+                <p>Information about the students.</p>
+            `,
+            projects: `
+                <h1>Student Projects</h1>
+                <p>Details of various student projects.</p>
+            `,
+            blog: `
+                <h1>Blog</h1>
+                <p>Read our latest blog posts.</p>
+            `,
+            'critical-code': `
+                <h1>Critical Code Studies</h1>
+                <p>Discussion about Critical Code Studies.</p>
+            `,
+            'ai-humanities': `
+                <h1>AI and the Humanities</h1>
+                <p>Discussion about AI and its impact on the Humanities.</p>
+            `,
+            contact: `
+                <h1>Contact Us</h1>
+                <p>Contact details and form go here.</p>
+            `
+        };
+
+        function loadPage(page) {
+            document.getElementById('content').innerHTML = pages[page];
+            updateActiveLink(page);
+        }
+
+        function updateActiveLink(activePage) {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            const activeLink = document.getElementById(activePage + 'Link');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+
+        function toggleMenu() {
+            var nav = document.getElementById('main-nav');
+            nav.classList.toggle('show');
+        }
+
+        function toggleDropdown(event, dropdownId) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => {
+                    if (dropdown !== event.currentTarget.parentElement) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+                event.currentTarget.parentElement.classList.toggle('active');
+            }
+        }
+
+        // Initially load the Home page
+        loadPage('home');
+    </script>
+</body>
+</html>
