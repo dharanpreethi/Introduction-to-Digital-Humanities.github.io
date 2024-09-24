@@ -5,126 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Humanities Lab IITSIM</title>
     <style>
-        body {
-            font-family: Cambria, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #E0DED6;
-            color: black;
-            font-size: 18px;
-        }
-        header {
-            background-color: #E0DED6;
-            width: 100%;
-            padding: 50px 0;
-            border-bottom: 3px solid #E0DED6;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 25px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline-block;
-            margin-left: 20px;
-            position: relative;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #E0DED6;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 10px 14px;
-            text-decoration: none;
-            display: block;
-            font-size: 16px;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        @media screen and (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav {
-                display: none;
-                width: 100%;
-                margin-top: 20px;
-            }
-            nav.show {
-                display: block;
-            }
-            nav ul {
-                flex-direction: column;
-            }
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-            .dropdown-content {
-                position: static;
-                display: none;
-                box-shadow: none;
-                padding-left: 20px;
-            }
-            .dropdown:hover .dropdown-content {
-                display: none;
-            }
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-            .menu-icon {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-            .text{
-            font-family: Cambria, serif;
-            margin: 0;
-            padding: 0;
-                
-        }
+       body {
+    font-family: 'Book Antiqua', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0DED6;
+    color: black;
+    font-size: 14px;
+    line-height: 1.5; /* Sets line spacing */
+}
+
+header {
+    background-color: #E0DED6;
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 3px solid #E0DED6;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E0DED6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav.show {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.text {
+    font-family: 'Book Antiqua', serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Digital Humanities Lab IIT (ISM) Dhanbad </h1>
+            <h1>Digital Humanities Lab IIT (ISM) Dhanbad</h1>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <nav id="main-nav">
                 <ul>
@@ -149,34 +164,31 @@
                 </ul>
             </nav>
         </div>
-         
     </header>
+    
     <main class="text">
-         
-            <p> Welcome to our Digital Humanities Lab </p>
+        <p>Welcome to our Digital Humanities Lab.</p>
 
-               <p> Digital Humanities is the bridge between traditional humanities and the ever-evolving digital landscape. It highlights both opportunities and challenges of how digital tools can be applied to study and interpret human experiences. 
-            Combining computing technologies with traditional humanities disciplines like history, literature, philosophy and cultural studies enable scholars to work together on projects that span continents and cultures. Digital tools facilitate the collection, analysis and sharing of data in ways that were previously unimaginable which opened up new possibilities for collaboration across disciplines and regions, thus uncovering new insights into human behavior, culture, and society.
-</p>
-       <p> As an umbrella term, it includes all digital technologies that shape and are shaped by human experiences. From social media algorithms to digital archives, technology influences how we communicate, learn, and share knowledge. 
-    On the other hand, human creativity and behavior drive the evolution of these digital tools. The relationship is collaborative—each side continously reshaping and refining the other. Digital Humanities explores and understands this exchange between tech and human experience.
-</p>
-       <p> At our Digital Humanities Lab, faculty, PhD scholars, and MA students collaboratively engage in innovative projects that push the boundaries of both digital and humanities research. </p>
-<p>
-Our M.A. in Digital Humanities and Social Sciences program, offered through the Department of Humanities and Social Sciences at the Indian Institute of Technology Dhanbad, provides a comprehensive curriculum designed to prepare students for the dynamic intersection of technology and culture. Key courses include:</p>
-<p>
+        <p>Digital Humanities is the bridge between traditional humanities and the ever-evolving digital landscape. It highlights both the opportunities and challenges of how digital tools can be applied to study and interpret human experiences. Combining computing technologies with traditional humanities disciplines like history, literature, philosophy, and cultural studies enables scholars to work together on projects that span continents and cultures. Digital tools facilitate the collection, analysis, and sharing of data in ways that were previously unimaginable, opening up new possibilities for collaboration across disciplines and regions, thus uncovering new insights into human behavior, culture, and society.</p>
 
-<li>Introduction to Digital Humanities (IDH): An overview of the core concepts, tools, and methodologies of Digital Humanities.</li>
-<li>Statistics: Foundational principles in statistical analysis relevant to humanities research.</li>
-<li>Text Mining: Techniques for extracting meaningful patterns and trends from large corpora of texts.</li>
-<li>Corpus Linguistics: The study of language patterns through large, structured sets of texts.</li>
-<li>Natural Language Processing (NLP): Computational techniques for analyzing and understanding human language.</li>
-<li>Digital Humanities Projects: Practical, project-based learning experiences that apply digital tools to humanities research.</li>
-<li>Digital Ethics: Critical engagement with the ethical implications of digital technologies and data use.</li>
-<li>Digital Society: Exploration of how digital transformations are reshaping social structures, behaviors, and cultural practices.</li>
-<li>Digital Transformations: The study of how digital technology impacts human societies, culture, and economies.</li>
-<p>Our program is designed to equip students with the technical skills and critical thinking necessary to address the complex challenges posed by the digital world, while fostering interdisciplinary collaboration and innovative research.</p>  
-</p>      
+        <p>As an umbrella term, it includes all digital technologies that shape and are shaped by human experiences. From social media algorithms to digital archives, technology influences how we communicate, learn, and share knowledge. On the other hand, human creativity and behavior drive the evolution of these digital tools. The relationship is collaborative—each side continuously reshaping and refining the other. Digital Humanities explores and understands this exchange between tech and human experience.</p>
+
+        <p>At our Digital Humanities Lab, faculty, PhD scholars, and MA students collaboratively engage in innovative projects that push the boundaries of both digital and humanities research.</p>
+
+        <p>Our M.A. in Digital Humanities and Social Sciences program, offered through the Department of Humanities and Social Sciences at the Indian Institute of Technology Dhanbad, provides a comprehensive curriculum designed to prepare students for the dynamic intersection of technology and culture. Key courses include:</p>
+        <ul>
+            <li>Introduction to Digital Humanities (IDH): An overview of the core concepts, tools, and methodologies of Digital Humanities.</li>
+            <li>Statistics: Foundational principles in statistical analysis relevant to humanities research.</li>
+            <li>Text Mining: Techniques for extracting meaningful patterns and trends from large corpora of texts.</li>
+            <li>Corpus Linguistics: The study of language patterns through large, structured sets of texts.</li>
+            <li>Natural Language Processing (NLP): Computational techniques for analyzing and understanding human language.</li>
+            <li>Digital Humanities Projects: Practical, project-based learning experiences that apply digital tools to humanities research.</li>
+            <li>Digital Ethics: Critical engagement with the ethical implications of digital technologies and data use.</li>
+            <li>Digital Society: Exploration of how digital transformations are reshaping social structures, behaviors, and cultural practices.</li>
+            <li>Digital Transformations: The study of how digital technology impacts human societies, culture, and economies.</li>
+        </ul>
+
+        <p>Our program is designed to equip students with the technical skills and critical thinking necessary to address the complex challenges posed by the digital world while fostering interdisciplinary collaboration and innovative research.</p>
     </main>
 
     <script>
@@ -191,53 +203,6 @@ Our M.A. in Digital Humanities and Social Sciences program, offered through the 
                 event.preventDefault();
             }
         }
-    </script>
-</body>
-</html>
-
-    <script>
-        const pages = {
-            home: `
-                <h1>Welcome to the Home Page</h1>
-                <p>This is the landing page of the website.</p>
-            `,
-            people: `
-                <h1>Meet the People</h1>
-                <p>Information about the people involved in the project.</p>
-            `,
-            projects: `
-                <h1>Student Projects</h1>
-                <p>Details of various student projects.</p>
-            `,
-            blog: `
-                <h1>Blog</h1>
-                <p>Read our latest blog posts.</p>
-            `,
-            reading: `
-                <h1>Reading Group</h1>
-                <p>Join our reading group discussions.</p>
-            `,
-            contact: `
-                <h1>Contact Us</h1>
-                <p>Contact details and form go here.</p>
-            `
-        };
-
-        function loadPage(page) {
-            document.getElementById('content').innerHTML = pages[page];
-            updateActiveLink(page);
-        }
-
-        function updateActiveLink(activePage) {
-            const links = document.querySelectorAll('nav ul li a');
-            links.forEach(link => {
-                link.classList.remove('active');
-            });
-            document.getElementById(activePage + 'Link').classList.add('active');
-        }
-
-        // Initially load the Home page
-        loadPage('home');
     </script>
 </body>
 </html>
