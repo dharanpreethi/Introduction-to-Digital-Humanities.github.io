@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Humanities Lab IIT (ISM) Dhanbad - News</title>
+    <style>
+       body {
+    font-family: Cambria, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0DED6;
+    color: black;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #E0DED6;
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 3px solid #E0DED6;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E0DED6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 0 20px;
+    font-family: 'Book Antiqua', serif; 
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify; 
+}
+
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.news-item .date {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav.show {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Digital Humanities Lab IIT (ISM) Dhanbad</h1>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown(this)">People</a>
+                        <div class="dropdown-content">
+                            <a href="#">Faculty</a>
+                            <a href="#">Students</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Website/Student_Projects.html" onclick="toggleDropdown(this)">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="Website/Student_Projects.html">Trajectory of Humanities COMPUTING Timeline</a>
+                            <a href="#">Digital Archive Projects</a>
+                            <a href="#"> Model Corpus Building </a>
+                        </div>
+                    </li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown(this)">Reading Group</a>
+                        <div class="dropdown-content">
+                            <a href="#">Critical Code Studies</a>
+                            <a href="#">AI and the Humanities</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="news-section">
+        <h1>Latest News</h1>
+        
+        <div class="news-item">
+            <h2>International Conference on Digital Humanities</h2>
+            <p class="date">Posted on October 15, 2024</p>
+            <p>We are excited to announce that the Digital Humanities Lab at IIT (ISM) Dhanbad will be hosting an International Conference on Digital Humanities in March 2025. The event will bring together scholars, researchers, and students to discuss cutting-edge research and innovations in the field. Stay tuned for the official call for papers and registration details!</p>
+        </div>
+
+        <div class="news-item">
+            <h2>New Collaboration with Global South DH Consortium</h2>
+            <p class="date">Posted on September 28, 2024</p>
+            <p>The Digital Humanities Lab is proud to announce a new collaboration with the Global South DH Consortium. This partnership aims to enhance research in Digital Humanities with a focus on South Asian narratives, postcolonial studies, and minimal computing practices. Joint workshops and events will be scheduled in the upcoming months.</p>
+        </div>
+
+        <div class="news-item">
+            <h2>Launch of Student-Led Digital Archive Project</h2>
+            <p class="date">Posted on September 10, 2024</p>
+            <p>Our MA students have successfully launched a new digital archive project, which aims to preserve local histories through digitized interviews, artifacts, and documents. The project emphasizes the importance of digital preservation in the humanities and will be showcased at the upcoming DH Expo in November.</p>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('main-nav');
+            nav.classList.toggle('show');
+        }
+
+        function toggleDropdown(element) {
+            if (window.innerWidth <= 768) {
+                element.parentElement.classList.toggle('active');
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>
 
