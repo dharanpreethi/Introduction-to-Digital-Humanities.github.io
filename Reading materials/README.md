@@ -8,3 +8,4 @@
 7. **P.P Sneha's [Mapping Digital Humanities in India](https://cis-india.org/papers/mapping-digital-humanities-in-india) and Shanmugapriya and Menon's [Infrastructure and Social Interaction: Situated Research Practices in Digital Humanities in India](http://digitalhumanities.org:8081/dhq/vol/14/3/000471/000471.html)**
 8. **Please read the Introduction chapter in Friedrich's The Birth of the Archive: A History of Knowledge**
 9. **For mapping class, read this short article [Critical Cartography](https://theoccupiedtimes.org/?p=13771)**
+10. **[Finding the Right Mapping Tool](https://gcdi.commons.gc.cuny.edu/2019/06/03/finding-the-right-tools-for-mapping-2/)**
