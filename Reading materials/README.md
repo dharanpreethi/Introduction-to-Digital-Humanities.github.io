@@ -9,3 +9,4 @@
 8. **Please read the Introduction chapter in Friedrich's The Birth of the Archive: A History of Knowledge**
 9. **For mapping class, read this short article [Critical Cartography](https://theoccupiedtimes.org/?p=13771)**
 10. **[Finding the Right Mapping Tool](https://gcdi.commons.gc.cuny.edu/2019/06/03/finding-the-right-tools-for-mapping-2/)**
+11. **[Why all maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)**
