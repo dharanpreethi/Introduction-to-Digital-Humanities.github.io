@@ -7,3 +7,4 @@
 6. **Please read Manifesto 2.0, John Unsworth's What is Humanities Computing and What is not?" (second chapter) and Patrik Svensson's Humanities Computing as Digital Humanities (Seventh Chapter in Mellisa Terras's Defining Digital Humanities book for this week's class (August 19 to 22)**
 7. **P.P Sneha's [Mapping Digital Humanities in India](https://cis-india.org/papers/mapping-digital-humanities-in-india) and Shanmugapriya and Menon's [Infrastructure and Social Interaction: Situated Research Practices in Digital Humanities in India](http://digitalhumanities.org:8081/dhq/vol/14/3/000471/000471.html)**
 8. **Please read the Introduction chapter in Friedrich's The Birth of the Archive: A History of Knowledge**
+9. **For mapping class, read this short article [Critical Cartography](https://theoccupiedtimes.org/?p=13771)**
