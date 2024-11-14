@@ -10,3 +10,4 @@
 9. **For mapping class, read this short article [Critical Cartography](https://theoccupiedtimes.org/?p=13771)**
 10. **[Finding the Right Mapping Tool](https://gcdi.commons.gc.cuny.edu/2019/06/03/finding-the-right-tools-for-mapping-2/)**
 11. **[Why all maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)**
+12. **[Derrida’s Archive Fever](https://literariness.org/2018/02/19/analysis-of-derridas-archive-fever/#google_vignette)
